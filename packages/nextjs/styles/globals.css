@@ -2,21 +2,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 
 :root {
   /* Premium Dark Theme Variables */
   --bg-base: #0a0a0f;
   --bg-gradient-start: #13131f;
   --bg-gradient-end: #0a0a0f;
-  
+
   --accent-primary: #6366f1; /* Indigo */
   --accent-secondary: #a855f7; /* Purple */
   --accent-glow: rgba(99, 102, 241, 0.4);
-  
+
   --glass-bg: rgba(20, 20, 30, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
-  
+
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
 }
@@ -24,7 +24,7 @@
 [data-theme] {
   background: var(--bg-base);
   color: var(--text-main);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 body {
@@ -33,12 +33,15 @@ body {
   background: radial-gradient(circle at top left, var(--bg-gradient-start), var(--bg-gradient-end));
   background-attachment: fixed;
   color: var(--text-main);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   overflow-x: hidden;
 }
 
 /* Base Headings */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin-bottom: 0.5rem;
   line-height: 1.2;
   font-weight: 700;
@@ -55,7 +58,7 @@ p {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0, 0, 0, 0) 70%);
   border-radius: 50%;
   filter: blur(60px);
   z-index: -1;
@@ -74,14 +77,26 @@ p {
 
 /* Animations */
 @keyframes float {
-  0% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-20px) scale(1.05); }
-  100% { transform: translateY(0px) scale(1); }
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
